@@ -15,6 +15,7 @@ Launch EC2 instance (free tier one)
 Add inbound rules in the security group of your EC2 instance-> http 0.0.0.0/0
 Install docker
 Create crontab -> * * * * * sh ~/.docker/cron.sh
+
 Create file ./docker/cron.sh :
 #!/bin/sh
 if grep -Fqe "Image is up to date" << EOF

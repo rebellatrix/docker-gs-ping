@@ -5,12 +5,14 @@ When updates of code being pushed with tag such as *.*.* it will trigger the who
 git tag -a 0.0.1 -m "Test release workflow"
 git push --tags
 
-1. Github -> Dockerhub
+FIRST
+Github -> Dockerhub
 You can find the workflow "Release to Docker Hub"
 Create Personal Access Token (PAT) at Docker Hub
 Add docker id & PAT to secrets of the repo (DOCKER_HUB_USERNAME & DOCKER_HUB_ACCESS_TOKEN) (Settings > Secrets > New secret)
 
-2. Dockerhub -> Docker container in AWS EC2 (pull latest images and run a container with it automatically)
+SECOND
+Dockerhub -> Docker container in AWS EC2 (pull latest images and run a container with it automatically)
 Launch EC2 instance (free tier one)
 Add inbound rules in the security group of your EC2 instance-> http 0.0.0.0/0
 Install docker
